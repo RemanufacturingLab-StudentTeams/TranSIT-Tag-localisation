@@ -1,28 +1,21 @@
-# Remanufacturing Lab - "Project Name"
-"Brief explanation of project"
+# Remanufacturing Lab - "TranSIT - RFID and QR-code Tag localisation"
+This repository contains code to locate the position of tags. The code is being used for the development of the Tag Mapping Robot at the Smart Sustainable Manufacturing lectorate at the Hague University of Applied Sciences.
+The URF RFID localisation algorithm is described in detail in: 
+- Alireza Beheshti Shirazi, Rufus Fraanje, Jenny Coenen, Robust passive UHF RFID tag localisation by intersecting RSSI indexed antenna sensitivity regions, to appear in Procedia Computer Science, 7th International Conference on Industry of the Future and Smart Manufacturing, 2026.
 
 # General Overview
-## File structure
-This project consists of several (mostly) heterogeneous components, that are kept in separate project-level directories with their own documentation. These are:
-- "Give a brief explanation of every component in the repository."
+This repository contains the code for UHF RFID localisation and for QR-code localisation.
 
-## Testing
-
-(Automated) testing is incredibly important, both for ensuring code correctness and to formally lay down expected behaviour. The different components have different testing requirements:
-
-### Version control
-A [Git Policy](docs/policy.md) was written for this project. Please adhere to it as tightly as possible during development.
-
-### Documentation
-
-Documentation requirements are different depending on the subject:
-- Hardware: Please include a copy of any hardware manuals within the `docs` directory. 
-- Non-proprietary software: A `README.md` file suffices. This file should explain why this software is used, how to set it up locally, and how to deploy it in production.
-- Proprietary software and config files: A `README.md file` is necessary, and comments should be written within the code itself explaining what it is for.
-- Schemas: These should be extensively documented. A comprehensive overview of the schema should be in the `schemas` directory, with a detailed `README.md`. The idea is that a collaborator should not have to be able to understand the internal workings of a component in order to still communicate with it over a given network protocol.
-
+# RFID Localization
+1. For any RFID localization task, the antenna pattern must first be determined.
+The relevant functions for the antenna pattern can be found in the RSSI-Function-D, RSSI-Function-Phi, and RSSI-Function-Alpha files.
+2. To integrate these functions, refer to the Antenna Pattern 2D folder.
+3. The Error-Model file provides the necessary model for handling measurement uncertainty.
+4. To extract the RSSI measurements required for localization, use the Extract Data - Alireza tool.
+5. With the extracted data, you can perform tag localization using the Robust RFID Tag Localization by Intersection method.
+6. All data related to the experiments can be found in the Experiment Data folder.
 
 # Attribution
+- Main developmer: Alireza Beheshti
+- Project manager: Rufus Fraanje
 
-- Project manager: [Manager of the project/project leader])
-- Collaborator - "roles of the collaborator": [Name]
