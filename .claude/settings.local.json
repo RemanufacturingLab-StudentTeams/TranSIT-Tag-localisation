@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git mv:*)",
+      "Bash(for f in RFID/RSSI-Function-Phi/*.csv)",
+      "Bash(do git mv \"$f\" \"rfid/1-rssi-calibration/data/\")",
+      "Bash(done)",
+      "Bash(for f in RFID/RSSI-Function-alpha/*.csv)",
+      "Bash(for f in \"RFID/Experiment Data/\"*.xlsx)",
+      "Bash(do git mv \"$f\" \"rfid/experiment-data/\")",
+      "Bash(for f in \"RFID/Robust RFID tag localization by intersecting RSSI indexed antenna/\"*.xlsx)",
+      "Bash(for f in \"QR-CODE/camera-c/3-Reman-Lab camera/\"*.jpg)",
+      "Bash(do git mv \"$f\" \"qr-code/1-camera-capture/images/\")",
+      "Bash(for f in \"QR-CODE/camera-cal/3-Reman-Lab camera/\"*.jpg)",
+      "Bash(do git mv \"$f\" \"qr-code/2-camera-calibration/images/\")",
+      "Bash(git rm:*)",
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)"
+    ]
+  }
+}
